@@ -1,11 +1,11 @@
 @import 'node_modules/typi/scss/typi';
 @import 'node_modules/modularscale-sass/stylesheets/modular-scale';
 
-$ms-base: 1.125rem;
+$ms-base: 1.2rem;
 $ms-ratio: $fourth;
 
 $typi: (
-    null: (1.125rem, 1.4)
+    null: (18px, 1.4)
 );
 
 html {
