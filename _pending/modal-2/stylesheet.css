@@ -45,6 +45,7 @@ body {
 .quotable {
     font-size: 1.4rem;
     margin-left: 4%;
+    font-style: italic;
 }
 
 #panel_right {
@@ -80,14 +81,18 @@ body {
 .student-info {
     display: inline-block;
     margin: 0;
-    width: 33%;
+    width: 50%;
     margin: 0;
     margin-bottom: 2%;
     margin-left: 4%;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
 }
 
 .student-info-right {
     color: #D2DAE0;
+    width: 26%;
+    margin-left: -2%;
 }
 
 #student_name {
@@ -95,6 +100,7 @@ body {
     width: 65%;
     font-size: 1.6rem;
     margin-top: 4%;
+    text-transform: none;
 }
 
 #randomParagraph {
