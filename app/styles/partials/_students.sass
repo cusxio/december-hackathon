@@ -60,12 +60,27 @@
     // Technique for lazy-loading images :)
     // (Height/Width) * 100
     padding-bottom: 150%
+    overflow: hidden
 
 .student__img
     position: absolute
     top: 0
     left: 0
     width: 100%
+    // Fix safari bug
+    transform: scale(1)
+    // ease-out-quad, ease-out-quint
+    transition: opacity 1s cubic-bezier(0.25,  0.46, 0.45, 0.94), filter 1s cubic-bezier(0.23,  1, 0.32, 1)
+    opacity: 0
+    filter: blur(20px)
+    will-change: opacity, filter
+
+    &.pre-loaded
+        opacity: 1
+
+    &.large-loaded
+        opacity: 1
+        filter: blur(0)
 
 .load
     background-color: #1e2226
