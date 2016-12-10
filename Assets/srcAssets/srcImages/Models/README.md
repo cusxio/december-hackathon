@@ -1,0 +1,1 @@
+Original, unmodified images for the models.
