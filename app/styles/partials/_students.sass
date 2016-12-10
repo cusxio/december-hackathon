@@ -1,0 +1,82 @@
+.students
+    display: flex
+    flex-flow: row wrap
+    min-height: 100vh
+    background-color: #1e2226
+
+.student
+    // display: none
+    position: relative
+    width: 50%
+    @include desktop
+        width: 25%
+    transition: opacity 0.25s ease-in-out, width 0.25s ease
+    cursor: pointer
+
+    &:hover
+        opacity: 0.7
+
+    &.viewed
+        .student__info
+            display: flex
+
+        &:hover
+            opacity: 1
+
+.student__info
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    flex-direction: column
+    align-items: center
+    background-color: rgba(41, 44, 46, 0.87)
+
+.student__info--name
+    padding: vr(2) vr(0) 0
+    @include tablet
+        padding-top: vr(3)
+    color: #5b6772
+    font-size: ms(0)
+    @include phablet
+        font-size: ms(1)
+    font-weight: 300
+    text-align: center
+
+.student__info--viewed
+    padding-top: vr(0.25)
+    color: #7f8b97
+    font-size: ms(-2)
+    @include phablet
+        font-size: ms(-1)
+    font-weight: 500
+    text-transform: uppercase
+
+.student__img
+    display: block
+    width: 100%
+
+.students__load
+    width: 100%
+
+.students__load--btn
+    margin: vr(2) 0
+    padding: vr(0.5) vr(2)
+    transition: opacity 0.25s ease, box-shadow 0.25s ease
+    border: 0
+    border-radius: 3px
+    outline: 0
+    background-color: #424b55
+    color: #b5c3d7
+    font-size: ms(-1)
+    cursor: pointer
+
+    &:hover
+        box-shadow: 0 5px 16px 0 rgba(0, 0 , 0, 0.3);
+        opacity: 0.9
+
+    &:active
+        opacity: 0.8
+

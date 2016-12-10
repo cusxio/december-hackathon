@@ -1,6 +1,9 @@
 @import 'node_modules/typi/scss/typi';
 @import 'node_modules/modularscale-sass/stylesheets/modular-scale';
 
+// Vertical Rhythm Baseline Height:
+// 18px * 1.4 = 25.2px or 1.4rem
+
 $ms-base: 1.2rem;
 $ms-ratio: $fourth;
 
