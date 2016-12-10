@@ -1,1 +1,0 @@
-All images in this folder have been compressed with lossless compression for better loading times.
