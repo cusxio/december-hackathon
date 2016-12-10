@@ -117,6 +117,14 @@ body {
     display: inline-block;
     width: 45%;
     margin-left: 4%;
+    color: #C5D0D8;
+    letter-spacing: .25rem;
+}
+
+.pplinks {
+    color: #45C2D5;
+    text-decoration: none;
+    letter-spacing: normal;
 }
 
 #published {
