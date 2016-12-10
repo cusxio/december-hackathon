@@ -7,6 +7,7 @@ body {
     width: 1201px;
     height: 826px;
     font-family: 'Roboto', sans-serif;
+    color: #5A6068;
 }
 
 #modal2 {
@@ -26,6 +27,7 @@ body {
     height: inherit;
     width: 40%;
     background-color: #DDE7F0;
+    margin: 0;
 }
 
 #modal2model {
@@ -57,7 +59,9 @@ body {
 
 #top_right_panel {
     height: 21%;
-    overflow: none;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: -2%;
 }
 
 .line {
@@ -67,21 +71,28 @@ body {
 }
 
 #evidence {
-    float: right;
-    width: 24%;
-    height: 100%;
-    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: inherit;
 }
 
 .student-info {
-    text-align: center;
     display: inline-block;
     margin: 0;
-    width: 38%;
+    width: 33%;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+.student-info-right {
+    color: #D2DAE0;
 }
 
 #student_name {
-    width: 76%;
+    display: block;
+    width: 65%;
+    font-size: 1.6rem;
 }
 
 #randomParagraph {
