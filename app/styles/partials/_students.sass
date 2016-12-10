@@ -1,11 +1,9 @@
 .students
     display: flex
     flex-flow: row wrap
-    min-height: 100vh
     background-color: #1e2226
 
 .student
-    // display: none
     position: relative
     width: 50%
     @include desktop
@@ -33,6 +31,7 @@
     flex-direction: column
     align-items: center
     background-color: rgba(41, 44, 46, 0.87)
+    z-index: 1
 
 .student__info--name
     padding: vr(2) vr(0) 0
@@ -54,14 +53,26 @@
     font-weight: 500
     text-transform: uppercase
 
+.student__img--lazy
+    display: block
+    position: relative
+    height: 0
+    // Technique for lazy-loading images :)
+    // (Height/Width) * 100
+    padding-bottom: 150%
+
 .student__img
     display: block
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
+    height: 100%
 
-.students__load
-    width: 100%
+.load
+    background-color: #1e2226
 
-.students__load--btn
+.load__button
     margin: vr(2) 0
     padding: vr(0.5) vr(2)
     transition: opacity 0.25s ease, box-shadow 0.25s ease
