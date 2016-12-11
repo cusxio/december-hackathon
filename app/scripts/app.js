@@ -2,25 +2,21 @@ import search from './search';
 
 search();
 
-const images = document.querySelectorAll('.student__img');
+const students = document.querySelector('.students');
+const profile = document.querySelector('.profile--container');
+const body = document.querySelector('body');
+const profileClose = document.querySelector('.profile__close');
 
-[].forEach.call(images, (img) => {
-    const tempImg = new Image();
-    tempImg.src = img.src;
+students.addEventListener('click', () => {
+    // const target = e.target.parentNode.parentNode;
+    // target.classList.add('viewed');
+    body.classList.add('disabled');
+    profile.classList.add('visible');
+});
 
-    tempImg.onload = () => {
-        img.classList.add('pre-loaded');
-    };
-
-    const data = img.getAttribute('data-src');
-    const largeImg = new Image();
-    largeImg.src = data;
-    largeImg.onload = () => {
-        img.src = data;
-        img.classList.remove('pre-loaded');
-        img.classList.add('large-loaded');
-        img.style.willChange = 'auto';
-    };
+profileClose.addEventListener('click', () => {
+    body.classList.remove('disabled');
+    profile.classList.remove('visible');
 });
 
 // https://webpack.github.io/docs/hot-module-replacement.html
