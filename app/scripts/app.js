@@ -7,9 +7,10 @@ const profile = document.querySelector('.profile--container');
 const body = document.querySelector('body');
 const profileClose = document.querySelector('.profile__close');
 
-students.addEventListener('click', () => {
-    // const target = e.target.parentNode.parentNode;
-    // target.classList.add('viewed');
+let target;
+
+students.addEventListener('click', (e) => {
+    target = e.target.parentNode.parentNode;
     body.classList.add('disabled');
     profile.classList.add('visible');
 });
@@ -17,6 +18,7 @@ students.addEventListener('click', () => {
 profileClose.addEventListener('click', () => {
     body.classList.remove('disabled');
     profile.classList.remove('visible');
+    target.classList.add('viewed');
 });
 
 // https://webpack.github.io/docs/hot-module-replacement.html
