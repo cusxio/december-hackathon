@@ -13,7 +13,8 @@
     display: flex
     position: relative
     flex-flow: row wrap
-    // min-height: 500px
+    max-width: 60rem
+    margin: 0 auto
     @include desktop
         box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2)
 
@@ -44,15 +45,25 @@
     display: flex
     position: relative
     width: 100%
+    max-height: vr(11)
     @include desktop
-        width: 30%
+        flex-direction: column
+        width: 40%
+        max-height: initial
     background-color: #d8e1ed
 
 .profile__img
     width: 100%
-    height: vr(10)
+    max-height: 100%
     overflow: hidden
-    filter: blur(2px)
+    @include desktop
+        overflow: inherit
+
+    img
+        width: 100%
+        filter: blur(2px)
+        @include desktop
+            filter: blur(0)
 
 .profile__quote
     position: absolute
@@ -63,10 +74,17 @@
     padding: vr(1)
     background-color: rgba(216, 225, 237, 0.57)
     text-align: center
+    @include desktop
+        position: relative
 
 .profile__quote--icon
     display: inline-block
     position: relative
+    @include desktop
+        position: absolute
+        top: -35px
+        left: 50%
+        margin-left: -25px
     width: 50px
     height: 50px
     border-radius: 50%
@@ -99,31 +117,41 @@
     @include tablet
         font-size: ms(1)
 
+    @include desktop
+        padding-top: 0
+        font-size: ms(-1)
+
     cite
         display: block
         padding-top: vr(0.5)
         font-size: ms(-1)
         @include mobile
             font-size: ms(0)
+        @include desktop
+            font-size: ms(-1)
 
 .profile__showcase
     width: 100%
     background-color: #fff
     color: #373c44
     @include desktop
-        width: 70%
+        width: 60%
 
 .profile__status
     position: relative
     border-bottom: 1px solid #d8e1ed
     z-index: 1
+    @include tablet
+        padding: 0 vr(1)
+    @include desktop
+        padding: 0
+    @include desktophd
+        padding: 0 vr(1)
 
 .profile__status--name
     padding: vr(1) vr(1) vr(0.5)
     color: #373c44
     font-size: ms(2)
-    @include desktop
-        padding-top: vr(1.5)
 
 .profile__status--enrolled
     padding: 0 vr(1) vr(0.5)
@@ -135,8 +163,6 @@
 
     &:last-of-type
         padding-bottom: vr(1)
-        @include desktop
-            padding-bottom: vr(1.5)
 
 .profile__status--date
     padding-left: vr(0.25)
@@ -154,18 +180,36 @@
     @include mobile
         right: vr(1)
         opacity: 1
+    @include tablet
+        right: vr(2)
     @include desktop
         right: vr(1.5)
+    @include desktophd
+        right: vr(2)
 
 .profile__info--intro
     padding: vr(1)
     font-size: ms(-1)
     line-height: vr(1)
+    @include tablet
+        padding: vr(1) vr(2)
+    @include desktop
+        padding: vr(1)
+    @include desktophd
+        padding: vr(1) vr(2)
 
 .profile__info--header
     padding: 0 vr(1) vr(0.5)
-    font-size: ms(1)
+    font-size: 1.35rem
     font-weight: 300
+    @include tablet
+        padding-right: vr(2)
+        padding-left: vr(2)
+    @include desktop
+        padding: 0 vr(1) vr(0.5)
+    @include desktophd
+        padding-right: vr(2)
+        padding-left: vr(2)
 
 .profile__links
     display: flex
@@ -173,6 +217,14 @@
     @include mobile
         flex-direction: row
     padding: 0 vr(1) vr(1)
+    @include tablet
+        padding-right: vr(2)
+        padding-left: vr(2)
+    @include desktop
+        padding: 0 vr(1) vr(1)
+    @include desktophd
+        padding-right: vr(2)
+        padding-left: vr(2)
 
     > div:last-child
         padding-top: vr(1)
@@ -191,7 +243,7 @@
     a
         transition: opacity 0.25s ease-out
         color: #63b9cd
-        font-size: ms(-1)
+        font-size: 0.75rem
         text-decoration: none
 
         &:hover
