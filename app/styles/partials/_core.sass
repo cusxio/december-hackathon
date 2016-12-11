@@ -35,6 +35,10 @@
             margin-right: 0
 
 // Career
+.core__career .profile__disclaimer
+    margin-top: 0
+    padding-bottom: 1.4rem
+
 .career__bar
     display: flex
     position: relative
@@ -97,7 +101,6 @@
 // Articles
 .article__number
     display: inline-block
-    width: vr(1.25)
     font-size: 1rem
 
 .articles__container
@@ -126,6 +129,16 @@
 
             &:nth-child(odd)
                 padding-right: vr(0.5)
+
+            // Selecting first 9 items
+        &:nth-child(-n+9)
+            .article__number
+                margin-right: vr(0.25)
+
+            // Selecting after the first 9 items
+        &:nth-child(n+10)
+            .article__number
+                margin-right: vr(0.25)
 
     a
         transition: opacity 0.25s ease-in-out
@@ -158,4 +171,53 @@
 
 // Pinnacle
 .pinnacle__container
-    height: 15rem
+    height: 15.7rem
+
+.pinnacle__info--title
+    margin-bottom: vr(0.125)
+    font-size: ms(0)
+
+.pinnacle__header
+    display: flex
+    flex-flow: row wrap
+    padding-bottom: vr(0.5)
+    font-size: 1.35rem
+    font-weight: 300
+
+    > div
+        padding-top: vr(0.25)
+        color: #929fb0
+        font-size: ms(-1)
+
+.pinnacle__info--desc
+    font-size: ms(-1)
+
+.pinnacle__impact,
+.pinnacle__launch-date
+    margin-top: vr(0.5)
+    @include mobile
+        margin-top: vr(1)
+    font-size: ms(-1)
+
+    em
+        font-style: normal
+        font-weight: 700
+
+.pinnacle__link
+    a
+        transition: opacity 0.25s ease-out
+        color: #63b9cd
+        font-size: 0.75rem
+        text-decoration: none
+
+        &:hover
+            opacity: 0.9
+
+        &:active
+            opacity: 0.8
+
+    svg
+        margin-left: vr(0.125)
+        opacity: 0.7
+        vertical-align: middle
+        fill: #63b9cd
