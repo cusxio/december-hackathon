@@ -1,0 +1,169 @@
+.profile__core
+    input[type="radio"]
+        display: none
+
+        &:checked
+            + .core__item
+                display: block
+
+    input[type="radio"]:nth-of-type(1):checked ~ .core__controls label:nth-child(1),
+    input[type="radio"]:nth-of-type(2):checked ~ .core__controls label:nth-child(2),
+    input[type="radio"]:nth-of-type(3):checked ~ .core__controls label:nth-child(3)
+        background-color: #7f8590
+
+.core__item
+    display: none
+
+.career__container
+    @include desktop
+        height: 15rem
+
+.core__controls
+    display: flex
+    justify-content: center
+    padding: vr(0.5) 0 vr(2)
+
+    label
+        width: 15px
+        height: 15px
+        margin-right: vr(0.5)
+        transition: background-color 0.25s ease
+        border: 1px solid #373c44
+        border-radius: 50px
+        cursor: pointer
+
+        &:last-child
+            margin-right: 0
+
+// Career
+.career__bar
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: space-between
+    max-width: 20rem
+    margin: 0 vr(1) vr(0.5)
+    padding: vr(0.25)
+    border: 1px solid #d8e1ed
+    border-radius: 3px
+    @include tablet
+        margin-right: vr(2)
+        margin-left: vr(2)
+    @include desktop
+        margin: 0 vr(1) vr(0.5)
+    @include desktophd
+        margin-right: vr(2)
+        margin-left: vr(2)
+
+.profile__disclaimer
+    padding: 0 vr(1) vr(0.5)
+    font-size: ms(-2)
+    @include tablet
+        padding-right: vr(2)
+        padding-left: vr(2)
+    @include desktop
+        padding: 0 vr(1) vr(0.5)
+    @include desktophd
+        padding-right: vr(2)
+        padding-left: vr(2)
+
+.career__bar--display
+    position: absolute
+    bottom: -1px
+    left: 0
+    height: 2px
+    border-radius: 3px
+
+.career__bar.exceptional
+    .career__bar--display
+        background-color: #78f08e
+
+    .career__bar--progress
+        background-color: #78f08e
+
+.career__bar.in-progress
+    .career__bar--display
+        background-color: #77cdef
+
+    .career__bar--progress
+        background-color: #77cdef
+
+.career__bar--description
+    width: calc(100% - 35px)
+    color: #929fb0
+    font-size: ms(-2)
+
+.career__bar--progress
+    position: relative
+    width: 35px
+    height: 35px
+    border-radius: 3px
+    color: #fff
+    font-size: 0.8rem
+    font-weight: 500
+
+    &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        content: attr(data-progress)
+
+
+// Articles
+.article__number
+    font-size: 1rem
+
+.articles__container
+    height: 15rem
+    overflow-y: scroll
+
+    ol
+        display: flex
+        flex-flow: row wrap
+        padding: 0 vr(1) vr(0.5)
+        @include tablet
+            padding-right: vr(2)
+            padding-left: vr(2)
+        @include desktop
+            justify-content: space-between
+            padding: 0 vr(1) vr(0.5)
+        @include desktophd
+            padding-right: vr(2)
+            padding-left: vr(2)
+
+    li
+        width: 100%
+        padding-bottom: vr(0.25)
+        font-size: ms(-1)
+        list-style-type: none
+        @include desktop
+            width: 50%
+            padding-bottom: vr(1)
+
+        &:nth-child(even)
+            padding-left: vr(0.25)
+
+        &:nth-child(odd)
+            padding-right: vr(0.25)
+
+    a
+        transition: opacity 0.25s ease-in-out
+        color: #63b9cd
+        text-decoration: none
+
+        &:hover
+            opacity: 0.9
+
+        &:active
+            opacity: 0.8
+
+    p
+        padding-top: vr(0.125)
+        color: #929fb0
+        font-size: 0.75rem
+
+// Pinnacle
+
+.pinnacle__container
+    height: 15rem
