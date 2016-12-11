@@ -1,0 +1,207 @@
+.profile--container
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 100vh
+    // padding: vr(2) vr(1)
+    @include desktop
+        padding: vr(4) vr(3) 0
+    background-color: rgba(27, 29, 32, 0.95)
+
+.profile
+    display: flex
+    position: relative
+    flex-flow: row wrap
+    // min-height: 500px
+    @include desktop
+        box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2)
+
+.profile__close
+    display: flex
+    position: absolute
+    top: 0
+    right: 0
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    @include desktop
+        width: 40px
+        height: 40px
+    background-color: #bbbcbd
+    // box-shadow: 0 5px 16px 0 rgba(0, 0 , 0, 0.2)
+    cursor: pointer
+    z-index: 1
+    @include desktop
+        z-index: 2
+    user-select: none
+
+    &:active
+        opacity: 0.9
+
+.profile__imgquote
+    display: flex
+    position: relative
+    width: 100%
+    @include desktop
+        width: 30%
+    background-color: #d8e1ed
+
+.profile__img
+    width: 100%
+    height: vr(10)
+    overflow: hidden
+    filter: blur(2px)
+
+.profile__quote
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    padding: vr(1)
+    background-color: rgba(216, 225, 237, 0.57)
+    text-align: center
+
+.profile__quote--icon
+    display: inline-block
+    position: relative
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #4f565f
+    font-family: serif
+    font-size: ms(2)
+    box-shadow: 0 5px 16px 0 rgba(0, 0 , 0, 0.5)
+    user-select: none
+
+    &::before
+        position: absolute
+        top: 8px
+        right: 0
+        left: 0
+        margin: 0 auto
+        color: #f0f0f0
+        font-family: serif
+        font-size: 2rem
+        font-weight: 700
+        content: "”"
+
+.profile__quote--quote
+    padding-top: vr(0.5)
+    color: #3f444b
+    font-size: ms(-1)
+    font-weight: 300
+    @include bare
+        font-size: ms(0)
+
+    @include tablet
+        font-size: ms(1)
+
+    cite
+        display: block
+        padding-top: vr(0.5)
+        font-size: ms(-1)
+        @include mobile
+            font-size: ms(0)
+
+.profile__showcase
+    width: 100%
+    background-color: #fff
+    color: #373c44
+    @include desktop
+        width: 70%
+
+.profile__status
+    position: relative
+    border-bottom: 1px solid #d8e1ed
+    z-index: 1
+
+.profile__status--name
+    padding: vr(1) vr(1) vr(0.5)
+    color: #373c44
+    font-size: ms(2)
+    @include desktop
+        padding-top: vr(1.5)
+
+.profile__status--enrolled
+    padding: 0 vr(1) vr(0.5)
+    color: #929fb0
+    font-size: 0.7rem
+    font-weight: 500
+    letter-spacing: 2px
+    text-transform: uppercase
+
+    &:last-of-type
+        padding-bottom: vr(1)
+        @include desktop
+            padding-bottom: vr(1.5)
+
+.profile__status--date
+    padding-left: vr(0.25)
+    color: #929fb0
+    font-size: 0.6rem
+    font-weight: 300
+
+.profile__status--emblem
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    opacity: 0.3
+    z-index: -1
+    @include mobile
+        right: vr(1)
+        opacity: 1
+    @include desktop
+        right: vr(1.5)
+
+.profile__info--intro
+    padding: vr(1)
+    font-size: ms(-1)
+    line-height: vr(1)
+
+.profile__info--header
+    padding: 0 vr(1) vr(0.5)
+    font-size: ms(1)
+    font-weight: 300
+
+.profile__links
+    display: flex
+    flex-direction: column
+    @include mobile
+        flex-direction: row
+    padding: 0 vr(1) vr(1)
+
+    > div:last-child
+        padding-top: vr(1)
+        @include mobile
+            margin-left: vr(2)
+            padding-top: 0
+
+.profile__links--header
+    color: #929fb0
+    font-size: ms(-2)
+    font-weight: 500
+    letter-spacing: 2px
+    text-transform: uppercase
+
+.portfolio__links--link
+    a
+        transition: opacity 0.25s ease-out
+        color: #63b9cd
+        font-size: ms(-1)
+        text-decoration: none
+
+        &:hover
+            opacity: 0.9
+
+        &:active
+            opacity: 0.8
+
+    svg
+        margin-left: vr(0.125)
+        opacity: 0.7
+        vertical-align: middle
+        fill: #63b9cd

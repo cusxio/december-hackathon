@@ -59,3 +59,9 @@ $breakpoints: (
         @content
     }
 };
+
+@mixin bare {
+    @include mq($min-width: map-get($breakpoints, bare)) {
+        @content
+    }
+};
