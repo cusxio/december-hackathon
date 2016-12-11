@@ -1,4 +1,6 @@
 .profile--container
+    // TODO: Tempory
+    display: none
     position: absolute
     top: 0
     left: 0
@@ -8,6 +10,7 @@
     @include desktop
         padding: vr(2) vr(3) 0
     background-color: rgba(27, 29, 32, 0.95)
+    z-index: 4
 
 .profile
     display: flex
@@ -27,19 +30,23 @@
     justify-content: center
     width: 50px
     height: 50px
-    @include desktop
-        width: 40px
-        height: 40px
+    transition: opacity 0.25s ease-in-out
     background-color: #bbbcbd
     // box-shadow: 0 5px 16px 0 rgba(0, 0 , 0, 0.2)
     cursor: pointer
     z-index: 1
-    @include desktop
-        z-index: 2
     user-select: none
 
     &:active
-        opacity: 0.9
+        opacity: 0.8
+
+    @include desktop
+        width: 40px
+        height: 40px
+        z-index: 2
+
+        &:hover
+            opacity: 0.9
 
 .profile__imgquote
     display: flex

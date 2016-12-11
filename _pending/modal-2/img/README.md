@@ -1,1 +1,0 @@
-Images currently IN USE on the page.
