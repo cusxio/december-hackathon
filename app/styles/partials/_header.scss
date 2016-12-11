@@ -68,8 +68,8 @@
 
 .btn--search--mobile {
     flex: 1;
-    color: #a4b4ba;
     text-align: right;
+    fill: #a4b4ba;
 }
 
 .search__icon--mobile {
@@ -93,7 +93,7 @@
 // material-icon override
 .btn__down-arrow {
     display: none !important;
-    color: #5d6167;
+    fill: #5d6167;
 
 }
 @media screen and (min-width: 800px) {
@@ -172,6 +172,10 @@
     cursor: pointer;
 }
 
+.btn--registration__icon {
+    fill: #fff;
+}
+
 .btn--registration__text {
     margin: 0 8px 0 12px;
     font-size: 13px;
@@ -229,7 +233,11 @@
     display: none;
 }
 
-.gallery.is-search {
+.students.is-search {
+    display: none;
+}
+
+.load.is-search {
     display: none;
 }
 
@@ -259,8 +267,9 @@
 }
 
 .btn--back__icon {
-    color: #a4b4ba;
+    cursor: pointer;
     vertical-align: middle;
+    fill: #a4b4ba;
 }
 
 .search--mobile.is-search {
@@ -302,11 +311,12 @@
 .search__icon--desktop {
     position: absolute;
     left: 25px;
-    color: #a4b4ba;
+    fill: #a4b4ba;
 }
 
 .search__input:focus + .search__icon--desktop {
-    color: #69bfdd;
+    transition: fill 0.25s ease-in-out;
+    fill: #69bfdd;
 }
 
 ::-webkit-input-placeholder {

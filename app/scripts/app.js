@@ -1,3 +1,7 @@
+import search from './search';
+
+search();
+
 const images = document.querySelectorAll('.student__img');
 
 [].forEach.call(images, (img) => {

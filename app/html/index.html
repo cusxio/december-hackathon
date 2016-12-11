@@ -7,7 +7,6 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Bov Academy</title>
     <link href="styles/app.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -26,10 +25,16 @@
                     </div>
                 </div>
                 <div class="btn--search--mobile">
-                    <i class="material-icons md-24 search__icon--mobile">search</i>
-                </div><button class="btn--dropdown"><img src="images/dots.png"> <i class="material-icons md-36 btn__down-arrow">arrow_drop_down</i></button>
+                    <svg class="search__icon--mobile" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+					<path d="M0 0h24v24H0z" fill="none"></path></svg>
+                </div><button class="btn--dropdown"><img src="images/dots.png"> <svg class="btn__down-arrow" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M7 10l5 5 5-5z"></path>
+				<path d="M0 0h24v24H0z" fill="none"></path></svg></button>
                 <div class="search--mobile">
-                    <button class="btn--back"><i class="material-icons md-24 btn--back__icon">arrow_back</i></button> <input class="search__input--mobile" id="" name="search" placeholder="Search" type="search">
+                    <button class="btn--back"><svg class="btn--back__icon" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 0h24v24H0z" fill="none"></path>
+					<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></button> <input class="search__input--mobile" id="" name="search" placeholder="Search" type="search">
                 </div>
             </div>
             <div class="secondary-toolbar">
@@ -42,8 +47,12 @@
                     </div>
                 </div>
                 <div class="search">
-                    <input class="search__input" id="" name="search" placeholder="Find Student" type="search"> <i class="material-icons md-24 search__icon--desktop">search</i>
-                </div><button class="btn--registration"><span class="btn--registration__text">REGISTER <span class="btn--registration__text--desktop">FOR the 2nd COHORT</span></span> <i class="btn--registration__icon material-icons md-18 md-light">arrow_forward</i></button>
+                    <input class="search__input" id="" name="search" placeholder="Find Student" type="search"><svg class="search__icon--desktop" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+					<path d="M0 0h24v24H0z" fill="none"></path></svg>
+                </div><button class="btn--registration"><span class="btn--registration__text">REGISTER <span class="btn--registration__text--desktop">FOR the 2nd COHORT</span></span> <svg class="btn--registration__icon" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"></path>
+				<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></button>
             </div>
         </header>
     </header>
@@ -111,7 +120,7 @@
     <div class="profile--container">
         <div class="profile">
             <div class="profile__close">
-                <svg height="24" version="1.1" viewbox="0 0 24 24" width="24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 				<path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path></svg>
             </div>
             <div class="profile__imgquote">
@@ -284,70 +293,52 @@
         <button class="load__button">Load More</button>
     </div>
     <footer class="footer">
-
-        <!-- site map -->
-
         <section class="site-map">
             <nav class="footer-nav">
-                <a class="menu-item" href="">HOME</a>
-                <a class="menu-item" href="">PROGRAMS AND CAREER PATHS</a>
-                <a class="menu-item" href="">OUR MISSION</a>
-                <a class="menu-item" href="">CAREERS</a>
-                <a class="menu-item" href="">CONTACT</a>
+                <a class="menu-item" href="">HOME</a> <a class="menu-item" href="">PROGRAMS AND CAREER PATHS</a> <a class="menu-item" href="">OUR MISSION</a> <a class="menu-item" href="">CAREERS</a> <a class="menu-item" href="">CONTACT</a>
             </nav>
             <nav class="social-buttons">
-                <a href="">
-                    <img class="img-social" src="images/img-twitter.png">
-                </a>
-                <a href="">
-                    <img class="img-social" src="images/img-camera.png">
-                </a>
-                <a href="">
-                    <img class="img-social" src="images/img-book.png">
-                </a>
+                <a href=""><svg class="img-social" height="32" version="1.1" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+				<path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path></svg></a>                <a href=""><svg class="img-social" height="20" version="1.1" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+				<path d="M17 1h-14c-1.1 0-2 0.9-2 2v14c0 1.101 0.9 2 2 2h14c1.1 0 2-0.899 2-2v-14c0-1.1-0.9-2-2-2zM9.984 15.523c3.059 0 5.538-2.481 5.538-5.539 0-0.338-0.043-0.664-0.103-0.984h1.581v7.216c0 0.382-0.31 0.69-0.693 0.69h-12.614c-0.383 0-0.693-0.308-0.693-0.69v-7.216h1.549c-0.061 0.32-0.104 0.646-0.104 0.984 0 3.059 2.481 5.539 5.539 5.539zM6.523 9.984c0-1.912 1.55-3.461 3.462-3.461s3.462 1.549 3.462 3.461-1.551 3.462-3.462 3.462c-1.913 0-3.462-1.55-3.462-3.462zM16.307 6h-1.615c-0.382 0-0.692-0.312-0.692-0.692v-1.617c0-0.382 0.31-0.691 0.691-0.691h1.615c0.384 0 0.694 0.309 0.694 0.691v1.616c0 0.381-0.31 0.693-0.693 0.693z"></path></svg></a>
+                <a href=""><img class="img-social" src="images/enlightenment.png"></a>
             </nav>
         </section>
-
-        <!-- attribution -->
-
         <section class="attribution">
-
-            <div class="attribution__title">Site developed by Bov Academy Students</div>
-
-            <!-- attribution profiles -->
-
+            <div class="attribution__title">
+                Site developed by Bov Academy Students
+            </div>
             <div class="attribution__profiles">
-
                 <div class="attribution__row-1">
-
                     <figure class="attribution__profile a1 test">
                         <img class="profile__student-img" src="images/jonathan-chan.png">
-                        <figcaption class="profile__name">Jonathan Chan</figcaption>
+                        <figcaption class="profile__name">
+                            Jonathan Chan
+                        </figcaption>
                     </figure>
                     <figure class="attribution__profile a2 test">
                         <img class="profile__student-img" src="images/yubin-mao.png">
-                        <figcaption class="profile__name">Yubin Mao</figcaption>
+                        <figcaption class="profile__name">
+                            Yubin Mao
+                        </figcaption>
                     </figure>
-
                 </div>
-
                 <div class="attribution__row-2">
-
                     <figure class="attribution__profile a3 yo">
                         <img class="profile__student-img" src="images/nathan-plummer.png">
-                        <figcaption class="profile__name">Nathan Plummer</figcaption>
+                        <figcaption class="profile__name">
+                            Nathan Plummer
+                        </figcaption>
                     </figure>
                     <figure class="attribution__profile a4 yo">
                         <img class="profile__student-img" src="images/chris-watland.png">
-                        <figcaption class="profile__name">Chris Watland</figcaption>
+                        <figcaption class="profile__name">
+                            Chris Watland
+                        </figcaption>
                     </figure>
-
                 </div>
-
             </div>
-
         </section>
-
     </footer>
     <script src="scripts/app.js">
     </script>
