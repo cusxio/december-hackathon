@@ -6,7 +6,7 @@
     min-height: 100vh
     // padding: vr(2) vr(1)
     @include desktop
-        padding: vr(4) vr(3) 0
+        padding: vr(2) vr(3) 0
     background-color: rgba(27, 29, 32, 0.95)
 
 .profile
@@ -75,7 +75,11 @@
     background-color: rgba(216, 225, 237, 0.57)
     text-align: center
     @include desktop
+        display: flex
         position: relative
+        align-items: center
+        justify-content: center
+        height: 100%
 
 .profile__quote--icon
     display: inline-block
@@ -117,11 +121,9 @@
         font-size: ms(0)
 
     @include tablet
-        font-size: ms(1)
-
-    @include desktop
         padding-top: 0
-        font-size: ms(-1)
+        font-size: ms(1)
+        line-height: vr(1)
 
     cite
         display: block

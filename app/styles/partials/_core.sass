@@ -56,6 +56,7 @@
         margin-left: vr(2)
 
 .profile__disclaimer
+    margin-top: vr(0.5)
     padding: 0 vr(1) vr(0.5)
     font-size: ms(-2)
     @include tablet
@@ -112,6 +113,8 @@
 
 // Articles
 .article__number
+    display: inline-block
+    width: vr(1.25)
     font-size: 1rem
 
 .articles__container
@@ -139,13 +142,13 @@
         list-style-type: none
         @include desktop
             width: 50%
-            padding-bottom: vr(1)
+            padding-bottom: vr(0.7)
 
-        &:nth-child(even)
-            padding-left: vr(0.25)
+            &:nth-child(even)
+                padding-left: vr(0.25)
 
-        &:nth-child(odd)
-            padding-right: vr(0.25)
+            &:nth-child(odd)
+                padding-right: vr(0.25)
 
     a
         transition: opacity 0.25s ease-in-out
