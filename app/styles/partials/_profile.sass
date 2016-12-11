@@ -1,5 +1,4 @@
 .profile--container
-    // TODO: Tempory
     display: none
     position: fixed
     top: 0
@@ -7,7 +6,6 @@
     width: 100%
     height: 100%
     min-height: 100vh
-    // padding: vr(2) vr(1)
     background-color: rgba(27, 29, 32, 0.95)
     overflow: hidden
     z-index: 4
@@ -166,6 +164,13 @@
 
 .profile__showcase
     width: 100%
+    padding: 0 vr(1)
+    @include tablet
+        padding: 0 vr(2)
+    @include desktop
+        padding: 0 vr(1)
+    @include desktophd
+        padding: 0 vr(2)
     background-color: #fff
     color: #373c44
     @include desktop
@@ -173,22 +178,18 @@
 
 .profile__status
     position: relative
+    margin: 0 vr(-1)
+    padding: 0 vr(1)
     border-bottom: 1px solid #d8e1ed
     z-index: 1
-    @include tablet
-        padding: 0 vr(1)
-    @include desktop
-        padding: 0
-    @include desktophd
-        padding: 0 vr(1)
 
 .profile__status--name
-    padding: vr(1) vr(1) vr(0.5)
+    padding: vr(1) vr(0) vr(0.5)
     color: #373c44
     font-size: ms(2)
 
 .profile__status--enrolled
-    padding: 0 vr(1) vr(0.5)
+    padding-bottom: vr(0.5)
     color: #929fb0
     font-size: 0.7rem
     font-weight: 500
@@ -222,43 +223,22 @@
         right: vr(2)
 
 .profile__info--intro
-    padding: vr(1)
+    padding: vr(1) vr(0)
     font-size: ms(-1)
     line-height: vr(1)
-    @include tablet
-        padding: vr(1) vr(2)
-    @include desktop
-        padding: vr(1)
-    @include desktophd
-        padding: vr(1) vr(2)
 
 .profile__info--header
-    padding: 0 vr(1) vr(0.5)
+    // padding: 0 vr(1) vr(0.5)
+    padding-bottom: vr(0.5)
     font-size: 1.35rem
     font-weight: 300
-    @include tablet
-        padding-right: vr(2)
-        padding-left: vr(2)
-    @include desktop
-        padding: 0 vr(1) vr(0.5)
-    @include desktophd
-        padding-right: vr(2)
-        padding-left: vr(2)
 
 .profile__links
     display: flex
     flex-direction: column
     @include mobile
         flex-direction: row
-    padding: 0 vr(1) vr(1)
-    @include tablet
-        padding-right: vr(2)
-        padding-left: vr(2)
-    @include desktop
-        padding: 0 vr(1) vr(1)
-    @include desktophd
-        padding-right: vr(2)
-        padding-left: vr(2)
+    padding-bottom: vr(1)
 
     > div:last-child
         padding-top: vr(1)

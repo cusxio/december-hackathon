@@ -28,7 +28,7 @@
         margin-right: vr(0.5)
         transition: background-color 0.25s ease
         border: 1px solid #373c44
-        border-radius: 50px
+        border-radius: 50%
         cursor: pointer
 
         &:last-child
@@ -41,31 +41,15 @@
     align-items: center
     justify-content: space-between
     max-width: 20rem
-    margin: 0 vr(1) vr(0.5)
+    margin-bottom: vr(0.5)
     padding: vr(0.25)
     border: 1px solid #d8e1ed
     border-radius: 3px
-    @include tablet
-        margin-right: vr(2)
-        margin-left: vr(2)
-    @include desktop
-        margin: 0 vr(1) vr(0.5)
-    @include desktophd
-        margin-right: vr(2)
-        margin-left: vr(2)
 
 .profile__disclaimer
     margin-top: vr(0.5)
-    padding: 0 vr(1) vr(0.5)
+    padding-bottom: vr(0.5)
     font-size: ms(-2)
-    @include tablet
-        padding-right: vr(2)
-        padding-left: vr(2)
-    @include desktop
-        padding: 0 vr(1) vr(0.5)
-    @include desktophd
-        padding-right: vr(2)
-        padding-left: vr(2)
 
 .career__bar--display
     position: absolute
@@ -118,21 +102,15 @@
 
 .articles__container
     height: 15rem
+    padding-right: vr(1)
     overflow-y: scroll
 
     ol
         display: flex
         flex-flow: row wrap
-        padding: 0 vr(1) vr(0.5)
-        @include tablet
-            padding-right: vr(2)
-            padding-left: vr(2)
+        padding-bottom: vr(0.5)
         @include desktop
             justify-content: space-between
-            padding: 0 vr(1) vr(0.5)
-        @include desktophd
-            padding-right: vr(2)
-            padding-left: vr(2)
 
     li
         width: 100%
@@ -144,10 +122,10 @@
             padding-bottom: vr(0.7)
 
             &:nth-child(even)
-                padding-left: vr(0.25)
+                padding-left: vr(0.5)
 
             &:nth-child(odd)
-                padding-right: vr(0.25)
+                padding-right: vr(0.5)
 
     a
         transition: opacity 0.25s ease-in-out
@@ -170,7 +148,7 @@
         background-color: #eff6f8
 
     &::-webkit-scrollbar
-        width: vr(0.5)
+        width: vr(0.4)
         background-color: #f5f5f5
 
     &::-webkit-scrollbar-thumb
@@ -179,6 +157,5 @@
 
 
 // Pinnacle
-
 .pinnacle__container
     height: 15rem

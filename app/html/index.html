@@ -464,33 +464,29 @@
     <script>
         WebFontConfig = {
             google: {
-                families: ['Roboto:100,300,400,500,700,900:latin', 'Roboto Slab:100,300,400,700:latin']
-            },
+                families: ["Roboto:100,300,400,500,700,900:latin", "Roboto Slab:100,300,400,700:latin", ]
+            }
         };
-        (function(d) {
-            var wf = d.createElement('script'),
-                s = d.scripts[0];
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-            s.parentNode.insertBefore(wf, s);
-
-            const images = d.querySelectorAll('.student__img');
-
-            [].forEach.call(images, (img) => {
-                const tempImg = new Image();
-                tempImg.src = img.src;
-
-                tempImg.onload = () => {
-                    img.classList.add('pre-loaded');
+        (function(a) {
+            var c = a.createElement("script"),
+                d = a.scripts[0];
+            c.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+            d.parentNode.insertBefore(c, d);
+            a = a.querySelectorAll(".student__img");
+            [].forEach.call(a, function(b) {
+                var a = new Image;
+                a.src = b.src;
+                a.onload = function() {
+                    b.classList.add("pre-loaded");
                 };
-
-                const data = img.getAttribute('data-src');
-                const largeImg = new Image();
-                largeImg.src = data;
-                largeImg.onload = () => {
-                    img.src = data;
-                    img.classList.remove('pre-loaded');
-                    img.classList.add('large-loaded');
-                    img.style.willChange = 'auto';
+                var c = b.getAttribute("data-src"),
+                    a = new Image;
+                a.src = c;
+                a.onload = function() {
+                    b.src = c;
+                    b.classList.remove("pre-loaded");
+                    b.classList.add("large-loaded");
+                    b.style.willChange = "auto";
                 };
             });
         })(document);
