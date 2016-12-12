@@ -88,6 +88,12 @@
     outline: none;
     background-color: #282b30;
     cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:active {
+      background-color: rgba(255, 255, 255, .06);
+      transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 // material-icon override
@@ -170,6 +176,12 @@
     color: #fff;
     white-space: nowrap;
     cursor: pointer;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:active {
+      opacity: 0.8;
+      transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .btn--registration__icon {
@@ -339,3 +351,30 @@
         display: flex;
     }
 }
+
+.animate-entry--1 {
+  animation-name: animate-entry;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: .1s;
+}
+.animate-entry--2 {
+  animation-name: animate-entry;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: .2s;
+} 
+.animate-entry--3 {
+  animation-name: animate-entry;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: .3s;
+}
+@keyframes animate-entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} 
