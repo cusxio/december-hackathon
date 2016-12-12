@@ -36,16 +36,3 @@
         }
     }
 }
-
-[data-tooltip-length] {
-    &::after {
-        white-space: normal;
-    }
-
-}
-
-[data-tooltip-length="medium"] {
-    &::after {
-        width: 150px;
-    }
-}
